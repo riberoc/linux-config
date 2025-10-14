@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Install kitty
-sudo apt update
 sudo apt install kitty -y
 
 # Ensure the config directory exists

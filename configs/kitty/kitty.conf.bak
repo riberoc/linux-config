@@ -1037,9 +1037,9 @@ enable_audio_bell no
 
 #: Window layout {{{
 
-# remember_window_size  yes
-# initial_window_width  640
-# initial_window_height 400
+remember_window_size no
+initial_window_width  640
+ initial_window_height 400
 
 #: If enabled, the OS Window size will be remembered so that new
 #: instances of kitty will have the same size as the previous
@@ -1149,7 +1149,7 @@ enable_audio_bell no
 #: Fade the text in inactive windows by the specified amount (a number
 #: between zero and one, with zero being fully faded).
 
-# hide_window_decorations no
+hide_window_decorations yes
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only and titlebar-and-corners can be used
@@ -1246,7 +1246,7 @@ enable_audio_bell no
 
 #: Tab bar {{{
 
-# tab_bar_edge bottom
+tab_bar_edge top 
 
 #: The edge to show the tab bar on, top or bottom.
 
@@ -1261,7 +1261,7 @@ enable_audio_bell no
 #: The second number is the margin between the tab bar and the
 #: contents of the current tab.
 
-# tab_bar_style fade
+tab_bar_style slant
 
 #: The tab bar style, can be one of:
 
@@ -1302,7 +1302,7 @@ enable_audio_bell no
 #: such as goto_tab, next_tab, previous_tab, etc. are automatically
 #: restricted to work only on matching tabs.
 
-# tab_bar_align left
+tab_bar_align center 
 
 #: The horizontal alignment of the tab bar, can be one of: left,
 #: center, right.
@@ -2923,3 +2923,9 @@ enable_audio_bell no
 #: }}}
 
 #: }}}
+
+
+# BEGIN_KITTY_THEME
+# VSCode_Dark
+include current-theme.conf
+# END_KITTY_THEME

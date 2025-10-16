@@ -1,14 +1,12 @@
 #!/bin/bash
 
 # Install kitty
-sudo apt install kitty -y
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-# Ensure the config directory exists
-mkdir -p ~/.config/kitty
+# Make kitty the default terminal
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $(which kitty) 50
 
-# Move your config
-mv configs/kitty.conf ~/.config/kitty/kitty.conf
+# Add your config
+cp -r configs/kitty ~/.config/kitty
 
-# Set kitty as the default terminal non-interactively
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/kitty 50
-sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
+echo "Kitty installed and config imported"

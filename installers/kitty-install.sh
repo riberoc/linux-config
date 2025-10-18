@@ -7,6 +7,6 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator $(which kitty) 50
 
 # Add your config
-cp -r ../configs/kitty ~/.config/kitty
+cp -r ../configs/kitty ~/.config/kitty/
 
 echo "Kitty installed and config imported"
